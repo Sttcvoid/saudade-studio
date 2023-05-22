@@ -24,17 +24,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-    </style>
-
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/gpkn');
+      @import url('https://fonts.cdnfonts.com/css/gpkn');
+      @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     </style>
 
     <link rel="stylesheet" href="https://eightyseven.ru/assets/tailwind.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
   </head>
   <body>
     <header id="navbar" class="fixed z-50 grid h-18 w-full select-none items-center supports-backdrop-blur:backdrop-blur" style="padding-bottom:15px;font-family:var(--main-font-semibold);transition: background-color .3s !important;">
@@ -121,20 +121,25 @@
                 <div>
                     <div class="bg-zinc-800 relative">
                     <div class="absolute inset-0">
-                        <img src="assets/img/4.png" aria-hidden="true" alt="" class="object-cover w-full h-full opacity-40 z-0">
+                        <img id="bg" src="assets/img/4.png" aria-hidden="true" alt="" class="object-cover w-full h-full opacity-40 z-0">
                     </div>
-                    <div class="container mx-auto py-22 lg:pt-48 lg:pb-40 flex">
+                    <div class="container mx-auto py-22 lg:pt-48 lg:pb-40 flex items-center text-center">
                         <div class="w-full relative z-20 px-3 py-6 pt-20 lg:pt-6">
                             <h1 style="font-family:var(--main-font-bold);" class="font-manrope text-3xl lg:text-5xl mt-6 lg:mt-0 mb-4 font-bold text-zinc-50">Творческий подход к
                                 <div class="grid grid-rows-1 mt-2 mb-4">
-                                    <div class="relative inset-0 top-0 highlight-hiding" style="grid-area:1 / 1">
-                                        <svg class="rough-annotation" style="position: absolute; top: 0px; left: 0px; overflow: visible; pointer-events: none; width: 100px; height: 100px;"></svg>
-                                        <span class="wrap">созданию сборок</span>
+                                    <div class="relative inset-0 top-0 highlight-hiding max-h-12" style="grid-area:1 / 1">
+                                        <div class="wrap swiper-container" style="z-index:-1">
+                                          <div class="swiper-wrapper">
+                                            <span class="swiper-slide text-teal-400">созданию сборок</span>
+                                            <span class="swiper-slide text-emerald-300">сюжету</span>
+                                            <span class="swiper-slide text-cyan-300">дизайну</span>
+                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </h1>
-                            <h2 style="font-family:var(--main-font-semibold);" class="text-lg leading-relaxed mb-7 text-zinc-200 max-w-xl">Saudade Studio — это организация по созданию сборок Майнкрафт с модами. Мы вкладываем в каждый проект всю свою душу.</h2>
-                            <button style="font-family:var(--main-font-semibold);" class="grid grid-flow-col items-center justify-center transition select-none px-5 py-2.5 gap-2.5 text-zinc-100 bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed outline-zinc-700 hover:bg-zinc-600 rounded-lg ring-1 ring-inset ring-white/20" aria-disabled="false" onclick="location.href='https://eightyseven.ru/modpacks';">
+                            <h2 style="font-family:var(--main-font-semibold);" class="text-lg leading-relaxed mb-7 mt-7 ml-auto mr-auto text-zinc-200 max-w-xl">Saudade Studio — это организация по созданию сборок Майнкрафт с модами. Мы вкладываем в каждый проект всю свою душу.</h2>
+                            <button style="font-family:var(--main-font-semibold);" class="ml-auto mr-auto grid grid-flow-col items-center justify-center transition select-none px-5 py-2.5 gap-2.5 text-zinc-100 bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed outline-zinc-700 hover:bg-zinc-600 rounded-lg ring-1 ring-inset ring-white/20" aria-disabled="false" onclick="location.href='https://eightyseven.ru/modpacks';">
                                 Наши сборки
                             </button>
                         </div>
@@ -375,6 +380,24 @@
       });
 
       onscroll = (event) => {updateNavbarStatus()};
+    </script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        direction: 'vertical',
+        loop: true,
+        autoHeight: true,
+        allowTouchMove: false,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 500,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
     </script>
     <!--<script src="https://eightyseven.ru/assets/footer-mods.js"></script>-->
     <!-- Yandex.Metrika counter -->

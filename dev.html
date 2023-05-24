@@ -128,7 +128,7 @@
                             <h1 style="font-family:var(--main-font-bold);" class="font-manrope text-3xl lg:text-5xl mt-6 lg:mt-0 mb-4 font-bold text-zinc-50">Творческий подход к
                                 <div class="grid grid-rows-1 mt-2 mb-4">
                                     <div class="relative inset-0 top-0 highlight-hiding max-h-12" style="grid-area:1 / 1">
-                                        <div class="wrap swiper-container" style="z-index:-1">
+                                        <div class="wrap swiper-container" style="z-index:-1;max-width:480px;">
                                           <div class="swiper-wrapper">
                                             <span class="swiper-slide text-teal-400">созданию сборок</span>
                                             <span class="swiper-slide text-emerald-300">сюжету</span>
@@ -383,11 +383,10 @@
     </script>
     <script>
       var swiper = new Swiper('.swiper-container', {
-        initialSlide: 1,
-        slidesPerView: 3,
+        initialSlide: 0,
+        slidesPerView: 1,
         spaceBetween: 30,
         centeredSlides: true,
-        direction: 'vertical',
         loop: true,
         autoHeight: true,
         allowTouchMove: false,

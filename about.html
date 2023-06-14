@@ -27,6 +27,50 @@
       @import url('https://fonts.cdnfonts.com/css/gpkn');
       @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      @font-face{font-family:"Material Icons Outlined";font-style:normal;font-weight:400;src:url('https://eightyseven.ru/assets/plus/fonts/MaterialIconsRound-Regular.otf')}
+      @font-face{font-family:"Material Icons Round";font-style:normal;font-weight:400;src:url('https://eightyseven.ru/assets/plus/fonts/MaterialIconsRound-Regular.otf')}
+    </style>
+
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .tooltip .tooltip-text {
+        visibility: hidden;
+        background-color: #27272a;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+      }
+      
+      .tooltip .tooltip-text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #27272a transparent transparent transparent;
+      }
+      
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
     </style>
 
     <link rel="stylesheet" crossorigin="anonymous" href="https://eightyseven.ru/assets/tailwind.css">
@@ -164,7 +208,7 @@
                       <a style="font-family:var(--main-font-semibold);" class="flex w-full lg:w-auto lg:inline-flex select-none px-5 pb-2.5 pt-3 font-medium leading-5 transition ease-in-out cursor-pointer bg-zinc-800" href="/about">
                           <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="mr-2 h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                          </svg>Текущий акт
+                          </svg>Актуальное
                       </a>
 
                       <a style="font-family:var(--main-font-semibold);" class="flex w-full lg:w-auto lg:inline-flex select-none px-5 pb-2.5 pt-3 font-medium leading-5 transition ease-in-out cursor-pointer hover:bg-zinc-800/80" href="/about/self-installation">
@@ -187,6 +231,26 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                           </svg>История студии
                       </a>
+
+                      <a style="font-family:var(--main-font-semibold);" class="flex w-full lg:w-auto lg:inline-flex select-none px-5 pb-2.5 pt-3 font-medium leading-5 transition ease-in-out cursor-pointer hover:bg-zinc-800/80" href="/about/history">
+                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="mr-2 h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        </svg>Состав студии
+                      </a>
+                    
+                      <a style="font-family:var(--main-font-semibold);" class="flex w-full lg:w-auto lg:inline-flex select-none px-5 pb-2.5 pt-3 font-medium leading-5 transition ease-in-out cursor-pointer hover:bg-zinc-800/80" href="/about/history">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" height="1em" width="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M6 20.735a2 2 0 0 1 -1 -1.735v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1"></path>
+                          <path d="M11 17a2 2 0 0 1 2 2v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a2 2 0 0 1 2 -2z"></path>
+                          <line x1="11" y1="5" x2="10" y2="5"></line>
+                          <line x1="13" y1="7" x2="12" y2="7"></line>
+                          <line x1="11" y1="9" x2="10" y2="9"></line>
+                          <line x1="13" y1="11" x2="12" y2="11"></line>
+                          <line x1="11" y1="13" x2="10" y2="13"></line>
+                          <line x1="13" y1="15" x2="12" y2="15"></line>
+                        </svg>Список сборок
+                      </a>
                   </div>
                 </div>
                 <div class="border-2 border-zinc-800 p-5 rounded-lg">
@@ -202,13 +266,65 @@
                             </div>
                             <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
                                 <div style="font-family:var(--main-font-semibold);" class="font-semibold text-zinc-100 mb-1 text-xl">Первый Акт</div>
-                                <div style="font-family:var(--main-font-semibold);" class="block font-medium text-zinc-300 mb-2">25 октября 2022
-                                <!-- --> <span class="ml-1">•</span> <span>
-                                    <svg class="inline-block -mt-1 mr-1.5 ml-1 h-3" fill="#d4d4d8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
-                                    </svg>40 </span>
+                                <div style="font-family:var(--main-font-semibold);" class="block font-medium text-zinc-300 mb-2">
+                                  <div class="grid md:flex">
+                                    <div class="tooltip flex" data-notify="Начало акта">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 mt-[1px]" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                                        <line x1="16" y1="3" x2="16" y2="7"></line>
+                                        <line x1="8" y1="3" x2="8" y2="7"></line>
+                                        <line x1="4" y1="11" x2="20" y2="11"></line>
+                                        <line x1="11" y1="15" x2="12" y2="15"></line>
+                                        <line x1="12" y1="15" x2="12" y2="18"></line>
+                                      </svg>
+                                      25 окт 2022
+                                      <div class="tooltip-text"></div>
+                                    </div>
+                                    <span>
+                                      <div class="tooltip" data-notify="Продолжительность">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block -mt-1 md:ml-4 h-4.5" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                          <circle cx="12" cy="12" r="9"></circle>
+                                          <polyline points="12 7 12 12 15 15"></polyline>
+                                        </svg>
+                                        <span id="current-act-duration">...</span>
+                                        <div class="tooltip-text"></div>
+                                      </div>
+                                    </span>
+                                    
+                                    <span>
+                                      <div class="tooltip" data-notify="Состав студии">
+                                        <svg class="inline-block md:-mt-1 mr-1.5 md:ml-5 h-3" fill="#d4d4d8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                                        40 чел.
+                                        <div class="tooltip-text"></div>
+                                      </div>
+                                    </span>
+                                  </div>
                                 </div>
                                 <div class="leading-relaxed text-zinc-300 w-full">Первый Акт был начат в октябре 2022 года. В нём верхушка студии задумала выпустить Базу Знаний, провести Вторые Студийные Игры, запустить свой сайт или подобие ему и завершить всё это Новым проектом</div>
-                                <div class=""></div>
+                                <div class="leading-relaxed text-zinc-300 w-full mt-3">
+                                  <p class="mb-1" style="font-family:var(--main-font-semibold);">На данный момент Saudade Studio находится в Первом Акте, где поставлены следующие задачи, ряд которых уже выполнен:</p>
+
+                                  <div class="grid gap-0.5">
+                                    <div class="flex gap-2">
+                                      <p style="font-size: 17px; font-family: 'Material Icons Outlined'">check_box</p><p style="font-family: var(--main-font-semibold)">Обновление группы</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                      <p style="font-size: 17px; font-family: 'Material Icons Outlined'">check_box</p><p style="font-family: var(--main-font-semibold)">Эгида Бот | База Знаний</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                      <p style="font-size: 17px; font-family: 'Material Icons Outlined'">check_box</p><p style="font-family: var(--main-font-semibold)">Приложение/Лаунчер</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                      <p style="font-size: 17px; font-family: 'Material Icons Outlined'">check_box</p><p style="font-family: var(--main-font-semibold)">Вторые Студийные Игры</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                      <p style="font-size: 17px; font-family: 'Material Icons Outlined'">check_box_outline_blank</p><p style="font-family: var(--main-font-semibold)">Глобальная сборка</p>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
                             </div>
                             </div>
                         </div>
@@ -239,6 +355,20 @@
             </div>
         </footer>
     </div>
+    <script>
+      $(document).ready(function() {
+        $('.tooltip').hover(
+          function() {
+            var text = $(this).attr('data-notify');
+            $(this).find('.tooltip-text').text(text);
+            console.log("hovered");
+          },
+          function() {
+            $(this).find('.tooltip-text').text('');
+          }
+        );
+      });
+    </script>
     <script>
       function getBodyScrollTop()
       {
@@ -334,6 +464,81 @@
 
           event.stopPropagation();
       });
+
+      function getDeclension(number, one, few, many) {
+        const mod10 = number % 10;
+        const mod100 = number % 100;
+
+        if (mod100 >= 11 && mod100 <= 19) {
+          return many;
+        }
+
+        if (mod10 === 1) {
+          return one;
+        }
+
+        if (mod10 >= 2 && mod10 <= 4) {
+          return few;
+        }
+
+        return many;
+      }
+
+      function calculateTime(startDate) {
+        const currentDate = new Date();
+        const startYear = startDate.getFullYear();
+        const startMonth = startDate.getMonth();
+        const startDay = startDate.getDate();
+
+        const currentYear = currentDate.getFullYear();
+        const currentMonth = currentDate.getMonth();
+        const currentDay = currentDate.getDate();
+
+        let years = currentYear - startYear;
+        let months = currentMonth - startMonth;
+        let days = currentDay - startDay;
+
+        if (days < 0) {
+          months--;
+          const daysInLastMonth = new Date(currentYear, currentMonth, 0).getDate();
+          days = daysInLastMonth - startDay + currentDay;
+        }
+
+        if (months < 0) {
+          years--;
+          months = 12 - startMonth + currentMonth;
+        }
+
+        let result = '';
+
+        if (years > 0) {
+          const yearDeclension = getDeclension(years, 'год', 'года', 'лет');
+          result += years === 1 ? `1 ${yearDeclension}` : `${years} ${yearDeclension}`;
+        }
+
+        if (months > 0) {
+          if (result.length > 0) {
+            result += ', ';
+          }
+          const monthDeclension = getDeclension(months, 'месяц', 'месяца', 'месяцев');
+          result += months === 1 ? `1 ${monthDeclension}` : `${months} ${monthDeclension}`;
+        }
+
+        if (days > 0) {
+          if (result.length > 0) {
+            result += ', ';
+          }
+          const dayDeclension = getDeclension(days, 'день', 'дня', 'дней');
+          result += days === 1 ? `1 ${dayDeclension}` : `${days} ${dayDeclension}`;
+        }
+
+        return result;
+      }
+
+      // Пример использования
+      const startDate = new Date(2022, 9, 25); // 25 октября 2022
+      $('#current-act-duration').text(calculateTime(startDate));
+
 
       onscroll = (event) => {updateNavbarStatus()};
     </script>

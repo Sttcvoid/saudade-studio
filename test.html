@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="tooltip" data-notify="Some Text">
+    <span>Hover over me</span>
+    <div class="tooltip-text"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var tooltips = document.querySelectorAll('.tooltip');
+
+      tooltips.forEach(function(tooltip) {
+        tooltip.addEventListener('mouseenter', function() {
+          var text = this.getAttribute('data-notify');
+          this.querySelector('.tooltip-text').textContent = text;
+        });
+
+        tooltip.addEventListener('mouseleave', function() {
+          this.querySelector('.tooltip-text').textContent = '';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

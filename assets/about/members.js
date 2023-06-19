@@ -53,7 +53,7 @@ try {
                                 <div>
                                     <div class="block font-medium text-zinc-200">${member.role}</div>
                                     <div class="text-zinc-100 text-2xl font-semibold truncate font-manrope" style="font-family:var(--main-font-bold)">${member.name}</div>
-                                    <div class="flex gap-3">${contacts}</div>
+                                    <div class="md:flex gap-3">${contacts}</div>
                                 </div>
                             </div>
                         </div>`;

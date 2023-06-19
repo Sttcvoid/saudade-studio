@@ -13,7 +13,7 @@ try {
         var html = ``;
         
         json.modpacks.forEach(element => {
-            var downloads = `<div class="flex gap-4">`;
+            var downloads = `<div class="grid md:flex md:gap-4 mt-2 md:mt-0">`;
             element.downloads.forEach(download => {
                 downloads += `<a href="${download.url}" class="text-zinc-400 hover:text-zinc-200 font-semibold cursor-pointer transition">${download.name}</a>`;
             });

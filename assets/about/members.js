@@ -52,7 +52,7 @@ try {
                                 </div>
                             </div>` : `<div class="-mt-12 py-5">
                                 <div class="border-0 w-24 md:w-32 h-full ml-4 rounded-br-lg overflow-hidden flex justify-center items-center pt-10">
-                                    <img height="213" src="https://em-content.zobj.net/source/microsoft-teams/363/bust-in-silhouette_1f464.png" width="233">
+                                    <img height="213" src="${imgHost + "/heads/Работяга.png"}" width="233">
                                 </div>
                             </div>`}
                             <div class="p-6 w-full flex items-center">

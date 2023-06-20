@@ -58,7 +58,7 @@ try {
                             <div class="p-6 w-full flex items-center">
                                 <div>
                                     <div class="block font-medium text-zinc-200">${member.role}</div>
-                                    <div class="text-zinc-100 text-2xl font-semibold truncate font-manrope" style="font-family:var(--main-font-bold)">${member.name}</div>
+                                    <div class="text-zinc-100 text-xl md:text-2xl font-semibold truncate font-manrope" style="font-family:var(--main-font-bold)">${member.name}</div>
                                     <div class="flex gap-3">${contacts}</div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ try {
                             <div class="p-6 w-full flex items-center">
                                 <div>
                                     <div class="block font-medium text-zinc-200">${member.role}</div>
-                                    <div class="text-zinc-100 text-2xl font-semibold flex items-center truncate font-manrope select-text" style="font-family:var(--main-font-bold)">${member.email.name}<span class="text-zinc-100/80">@${member.email.domain}</span></div>
+                                    <div class="text-zinc-100 text-xl md:text-2xl font-semibold flex items-center truncate font-manrope select-text" style="font-family:var(--main-font-bold)">${member.email.name}<span class="text-zinc-100/80">@${member.email.domain}</span></div>
                                     <div class="md:flex gap-3">${contacts}</div>
                                 </div>
                             </div>

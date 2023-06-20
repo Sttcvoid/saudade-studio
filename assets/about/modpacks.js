@@ -67,7 +67,7 @@ try {
 
                 </div>          
                 
-                <div class="text-zinc-100 text-3xl font-semibold font-manrope mt-3 md:mt-2" style="font-family:var(--main-font-bold)">${element.name}</div>
+                <div class="text-zinc-100 text-2xl md:text-3xl font-semibold font-manrope mt-3 md:mt-2" style="font-family:var(--main-font-bold)">${element.name}</div>
                 <div class="text-zinc-300 text-lg font-semibold font-manrope mt-3 md:mt-1" style="font-family:var(--main-font-semibold)">Доступно к скачиванию:
                   ${downloads}
                 </div>

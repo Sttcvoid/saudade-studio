@@ -21,7 +21,7 @@ try {
 
             html += `<div class="lg:col-span-1 text-zinc-100 border-2 border-zinc-800 rounded-lg h-full flex">
             <div class="-mt-12">
-              <div class="border-0 w-32 h-full ml-4 rounded-br-lg overflow-hidden flex justify-center items-center pt-10">
+              <div class="border-0 w-24 md:w-32 h-full ml-4 rounded-br-lg overflow-hidden flex justify-center items-center pt-10">
                 <img class="h-28 w-28" src="${element.icon}">
               </div>
             </div>

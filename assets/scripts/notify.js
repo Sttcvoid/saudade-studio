@@ -20,8 +20,8 @@ function getCookie(cname) {
     return "";
 }
 
-if (getCookie('notify') != 'vktg') {
-    setCookie('notify', 'vktg', 365);
+if (getCookie('notify') != 'vortex') {
+    setCookie('notify', 'vortex', 365);
     $(".notify-modal").removeClass("hidden");
     $("body").addClass("overflow-hidden");
 }

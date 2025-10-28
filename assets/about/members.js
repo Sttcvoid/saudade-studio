@@ -1,7 +1,7 @@
 var imgHost = '../assets/img'; //'https://saudade-studio.ru/assets/img';
 
 try {
-    fetch('https://api.eightyseven.ru/saudade/members').then(function (response) {
+    fetch('https://api.esvn.group/saudade/members').then(function (response) {
         switch (response.status) {
             // status "OK"
             case 200:

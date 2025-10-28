@@ -1,5 +1,5 @@
 try {
-    fetch('https://api.eightyseven.ru/saudade/modpacks').then(function (response) {
+    fetch('https://api.esvn.group/saudade/modpacks').then(function (response) {
         switch (response.status) {
             // status "OK"
             case 200:
